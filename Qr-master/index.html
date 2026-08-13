@@ -143,7 +143,6 @@
             margin-bottom: 24px;
             box-shadow: 0 10px 30px 0 var(--glass-shadow);
             
-            /* Initial state for Staggered Pop-Up */
             opacity: 0;
             transform: translateY(35px) scale(0.96);
             animation: liquidCardPopUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -198,6 +197,11 @@
 
         li {
             margin-bottom: 8px;
+        }
+
+        a {
+            color: #4f46e5;
+            text-decoration: underline;
         }
 
         /* Highlighting Pills */
@@ -311,9 +315,9 @@
 
     <!-- Header -->
     <div class="header">
-        <div class="badge">🔒 100% Offline & Private</div>
+        <div class="badge">🔒 Privacy First & Transparent</div>
         <h1>QR Master Toolkit</h1>
-        <p>Global Privacy Policy • Last Updated: August 1, 2026</p>
+        <p>Global Privacy Policy • Last Updated: August 13, 2026</p>
     </div>
 
     <!-- Main Content Container -->
@@ -322,74 +326,77 @@
         <!-- Quick Summary Card -->
         <div class="card">
             <h2>Overview</h2>
-            <p><strong>QR Master Toolkit</strong> ("we," "our," or "us") respects your absolute right to digital privacy. This application is designed as a fully standalone, offline utility for scanning and generating QR codes and barcodes.</p>
+            <p><strong>QR Master Toolkit</strong> ("we," "our," or "us") respects your absolute right to privacy. This application functions as a utility for scanning and generating QR codes and barcodes, supported by non-intrusive mobile advertising.</p>
             
             <div class="pill-grid">
-                <div class="pill-item">✅ 100% Free Application</div>
-                <div class="pill-item">❌ Zero Advertisements</div>
-                <div class="pill-item">❌ No Data Collection</div>
-                <div class="pill-item">🌐 Operates Entirely Offline</div>
+                <div class="pill-item">✅ 100% Free Utility</div>
+                <div class="pill-item">📺 Ad-Supported (Google AdMob)</div>
+                <div class="pill-item">🔒 Real-Time On-Device Scanning</div>
+                <div class="pill-item">🚫 Zero Personal Data Storage</div>
             </div>
         </div>
 
-        <!-- 1. Zero Data Collection -->
+        <!-- 1. AdMob & Third-Party Advertising -->
         <div class="card">
-            <h2>1. Information Collection & Storage</h2>
-            <p>We do <strong>not</strong> collect, store, transmit, process, share, or sell any personal data, usage telemetry, device identifiers, or scanned content under any circumstances.</p>
+            <h2>1. Advertising & Third-Party Services</h2>
+            <p>To keep QR Master Toolkit completely free for all users, we integrate <strong>Google AdMob</strong> to display advertisements. AdMob may serve three formats of ads within the app:</p>
             <ul>
-                <li><strong>No User Tracking:</strong> QR Master Toolkit does not include analytics SDKs, tracking pixels, or user profiling tools.</li>
-                <li><strong>Local Operation:</strong> All QR code generation, scanning, and processing take place locally in your device’s volatile memory (RAM). Scanned results never leave your device.</li>
+                <li><strong>Banner Ads:</strong> Displayed at fixed positions on the screen.</li>
+                <li><strong>Interstitial Ads:</strong> Full-screen ads shown during smooth transitions between tasks.</li>
+                <li><strong>Rewarded Ads:</strong> Optional video ads that users can choose to watch to unlock specific app features or rewards.</li>
+            </ul>
+            <p>To serve ads, measure ad performance, and prevent fraud, Google AdMob may automatically collect non-personally identifiable diagnostic and device information, such as IP address, mobile advertising identifiers (e.g., Google Advertising ID / AAID), and device performance data.</p>
+            <p>For details on how Google uses data when you use our app, please review <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google’s Privacy & Terms</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google AdMob Privacy Policy</a>.</p>
+        </div>
+
+        <!-- 2. Zero Personal Data Collection -->
+        <div class="card">
+            <h2>2. Information Collection & Processing</h2>
+            <p>Apart from standard ad-serving data processed directly by Google AdMob, <strong>we do not collect, store, share, or transmit any personal data</strong>, user scan histories, or QR code contents.</p>
+            <ul>
+                <li><strong>Local Execution:</strong> All QR code generation, image scanning, and decoding process entirely on your local device RAM. Your scanned data never reaches our servers.</li>
+                <li><strong>No User Registration:</strong> You are never asked to create an account, enter email addresses, or provide personal details to use the application.</li>
             </ul>
         </div>
 
-        <!-- 2. Device Permissions -->
+        <!-- 3. Device Permissions -->
         <div class="card">
-            <h2>2. Device Permissions Explained</h2>
-            <p>To provide full functionality, QR Master Toolkit requests minimal, essential system permissions. These are processed strictly on-device:</p>
+            <h2>3. Device Permissions Explained</h2>
+            <p>QR Master Toolkit requests minimal essential Android system permissions solely to deliver features locally on your device:</p>
             <ul>
-                <li><strong>Camera Access (`CAMERA`):</strong> Required solely to capture live camera feed for scanning QR codes and barcodes. Camera frames are analyzed in real-time on your device and are never recorded, saved, or uploaded.</li>
-                <li><strong>Storage / Gallery Access (`READ_EXTERNAL_STORAGE`):</strong> Required only when you explicitly select an image from your device gallery to scan a QR code or save a generated QR image to your device.</li>
+                <li><strong>Camera Access (`CAMERA`):</strong> Required solely to capture live video feeds for scanning QR/barcodes. Camera frames are processed instantly in local memory and are never saved or uploaded.</li>
+                <li><strong>Vibration (`VIBRATE`):</strong> Used to give tactile haptic feedback upon successful code scanning.</li>
+                <li><strong>Internet & Network (`INTERNET`, `ACCESS_NETWORK_STATE`):</strong> Required strictly to load Google AdMob advertisements and verify internet connectivity status.</li>
             </ul>
         </div>
 
-        <!-- 3. Advertising & Subscriptions -->
+        <!-- 4. Global Regulatory Compliance -->
         <div class="card">
-            <h2>3. Advertising & Subscriptions</h2>
-            <p>This application is <strong>completely free of charge</strong> with no monetization hurdles:</p>
+            <h2>4. Global Privacy Framework Compliance</h2>
+            <p>We comply with international privacy regulations through strict architectural data minimization:</p>
             <ul>
-                <li><strong>No Ads:</strong> QR Master Toolkit does not integrate Google AdMob or any third-party ad networks.</li>
-                <li><strong>No Subscriptions / In-App Purchases:</strong> All features are unlocked and free forever. No payment credentials or account creations are ever required.</li>
-            </ul>
-        </div>
-
-        <!-- 4. Global Data Protection Compliance -->
-        <div class="card">
-            <h2>4. Global Regulatory Compliance</h2>
-            <p>Because QR Master Toolkit operates entirely offline and collects zero user data, it naturally complies with all major global data privacy frameworks across all legal jurisdictions:</p>
-            <ul>
-                <li><strong>European Union (GDPR) & United Kingdom (UK GDPR):</strong> Since no personal data is collected or processed, no data controller or processor obligations are triggered under Article 6 of GDPR.</li>
-                <li><strong>California, USA (CCPA / CPRA):</strong> We do not "sell" or "share" personal information as defined by California consumer privacy statutes.</li>
-                <li><strong>India (DPDPA 2023):</strong> The app fully satisfies India's Digital Personal Data Protection Act requirements as no personal data is processed or transferred.</li>
-                <li><strong>Brazil (LGPD) & International Privacy Laws:</strong> Fully compliant worldwide by architecture, owing to zero data retention.</li>
+                <li><strong>European Economic Area (GDPR) & UK GDPR:</strong> Google AdMob respects user consent choices for personalized vs. non-personalized advertising in compliance with EU regulations.</li>
+                <li><strong>California (CCPA / CPRA):</strong> We do not sell or share personal information as defined by California consumer privacy laws.</li>
+                <li><strong>India (DPDPA 2023):</strong> Fully compliant with the Digital Personal Data Protection Act as no personal user identifiers are harvested or retained.</li>
             </ul>
         </div>
 
         <!-- 5. Children's Privacy -->
         <div class="card">
             <h2>5. Children’s Privacy</h2>
-            <p>QR Master Toolkit does not address or target anyone under the age of 13 (or under 16 in the European Union). Because we do not collect any personal data whatsoever, the app is safe for users of all ages worldwide.</p>
+            <p>QR Master Toolkit does not knowingly collect personal information from children under the age of 13 (or 16 in the EU). Our third-party ad partner (Google AdMob) is configured to comply with child safety guidelines including COPPA.</p>
         </div>
 
         <!-- 6. Changes to Policy -->
         <div class="card">
             <h2>6. Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy periodically. However, our core philosophy of <strong>Zero Data Collection</strong> will remain unchanged. Any revisions will be published on this URL with an updated revision date.</p>
+            <p>We may update our Privacy Policy from time to time to reflect functional updates or regulatory changes. Any revisions will be published immediately on this URL with an updated "Last Updated" date.</p>
         </div>
 
         <!-- 7. Contact Us -->
         <div class="card">
             <h2>7. Contact & Support</h2>
-            <p>If you have any questions, suggestions, or technical inquiries regarding QR Master Toolkit or this Privacy Policy, feel free to contact us:</p>
+            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or app usage, feel free to contact us:</p>
             <a href="mailto:DataShield.studio@gmail.com" class="contact-btn">✉️ Contact Support via Email</a>
         </div>
 
