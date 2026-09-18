@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Hypnotix: Live TV IPTV Player</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FCFBFC;
+    --bg-2:#F3F1F6;
+    --surface:#FFFFFF;
+    --surface-2:#F6F5F9;
+    --border: rgba(24,20,40,0.09);
+    --text:#17151F;
+    --muted:#65616F;
+    --accent:#E23577;
+    --accent-2:#7C3AED;
+    --accent-grad: linear-gradient(120deg, #FF6A45 0%, #E23577 45%, #7C3AED 100%);
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --ring: 0 0 0 3px rgba(226,53,119,0.35);
+    --shadow-sm: 0 1px 2px rgba(24,20,40,0.05);
+    --shadow-md: 0 12px 32px -12px rgba(24,20,40,0.16);
+  }
+  :root[data-theme="light"]{ color-scheme: light; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121118;
+      --bg-2:#0E0D13;
+      --surface:#1B1A23;
+      --surface-2:#211F2B;
+      --border: rgba(255,255,255,0.09);
+      --text:#F1EFF6;
+      --muted:#9C98AA;
+      --accent:#FF3D77;
+      --accent-2:#9B4DFF;
+      --accent-grad: linear-gradient(120deg, #FF6A45 0%, #FF3D77 45%, #9B4DFF 100%);
+      --shadow-sm: none;
+      --shadow-md: none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121118;
+    --bg-2:#0E0D13;
+    --surface:#1B1A23;
+    --surface-2:#211F2B;
+    --border: rgba(255,255,255,0.09);
+    --text:#F1EFF6;
+    --muted:#9C98AA;
+    --accent:#FF3D77;
+    --accent-2:#9B4DFF;
+    --accent-grad: linear-gradient(120deg, #FF6A45 0%, #FF3D77 45%, #9B4DFF 100%);
+    --shadow-sm: none;
+    --shadow-md: none;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(226,53,119,0.09), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(124,58,237,0.07), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-2);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{outline:none; box-shadow:var(--ring); border-radius:4px;}
+
+  .hero{
+    padding:64px 24px 40px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+    background: linear-gradient(180deg, rgba(226,53,119,0.06), transparent 70%);
+  }
+  .mark{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 16px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:var(--surface);
+    box-shadow:var(--shadow-sm);
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:0.02em;
+    color:var(--text);
+  }
+  .mark .dot{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--accent-grad);
+    box-shadow:0 0 10px rgba(226,53,119,0.5);
+  }
+  .hero h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(30px, 5vw, 46px);
+    margin:22px auto 10px;
+    max-width:720px;
+    letter-spacing:-0.01em;
+  }
+  .hero p.tagline{
+    margin:0 auto;
+    color:var(--muted);
+    max-width:520px;
+    font-size:16px;
+  }
+  .hero .bar{
+    width:120px;height:4px;border-radius:4px;
+    margin:26px auto 0;
+    background:var(--accent-grad);
+  }
+  .hero .updated{
+    margin-top:18px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  .shell{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:240px minmax(0,1fr);
+    gap:48px;
+    padding:48px 24px 96px;
+  }
+  @media (max-width:860px){
+    .shell{grid-template-columns:1fr; padding:32px 18px 72px;}
+  }
+
+  nav.toc{
+    position:sticky;
+    top:24px;
+    align-self:start;
+    max-height:calc(100vh - 48px);
+    overflow-y:auto;
+  }
+  @media (max-width:860px){
+    nav.toc{ position:static; max-height:none; }
+  }
+  nav.toc .toc-title{
+    font-family:var(--font-display);
+    font-size:12px;
+    font-weight:600;
+    color:var(--muted);
+    margin-bottom:12px;
+    padding-left:2px;
+  }
+  nav.toc ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;}
+  nav.toc a{
+    display:block;
+    padding:8px 12px;
+    border-radius:8px;
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    border-left:2px solid transparent;
+    transition:color .15s ease, background .15s ease, border-color .15s ease;
+  }
+  nav.toc a:hover{color:var(--text); background:var(--surface);}
+  nav.toc a.active{
+    color:var(--text);
+    background:var(--surface);
+    border-left-color:var(--accent-2);
+    font-weight:600;
+    box-shadow:var(--shadow-sm);
+  }
+  details.toc-mobile{display:none;}
+  @media (max-width:860px){
+    nav.toc ul{display:none;}
+    details.toc-mobile{display:block; margin-bottom:8px;}
+    details.toc-mobile[open] nav.toc ul{display:flex;}
+    details.toc-mobile summary{
+      cursor:pointer;
+      font-family:var(--font-display);
+      font-weight:600;
+      font-size:14px;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:var(--surface);
+      list-style:none;
+    }
+    details.toc-mobile summary::-webkit-details-marker{display:none;}
+  }
+
+  main{min-width:0;}
+  .lead{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:22px 24px;
+    color:var(--muted);
+    font-size:15px;
+    margin-bottom:36px;
+    box-shadow:var(--shadow-sm);
+  }
+  .lead strong{color:var(--text);}
+
+  section{
+    padding-top:6px;
+    margin-bottom:40px;
+    scroll-margin-top:24px;
+  }
+  section h2{
+    font-family:var(--font-display);
+    font-size:22px;
+    font-weight:600;
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  section h2 .chip{
+    width:6px;height:20px;border-radius:3px;
+    background:var(--accent-grad);
+    flex-shrink:0;
+  }
+  section h3{
+    font-family:var(--font-display);
+    font-size:16px;
+    font-weight:600;
+    margin:22px 0 8px;
+    color:var(--text);
+  }
+  section p{margin:0 0 14px; color:var(--text);}
+  section p.muted{color:var(--muted);}
+  section ul{margin:0 0 14px; padding-left:20px;}
+  section li{margin-bottom:8px;}
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px 20px;
+    margin:16px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  .card.accent{
+    border-color:rgba(226,53,119,0.30);
+    background:linear-gradient(180deg, rgba(226,53,119,0.06), var(--surface) 60%);
+  }
+  .card h4{
+    margin:0 0 8px;
+    font-family:var(--font-display);
+    font-size:14px;
+    font-weight:600;
+  }
+  .card p{margin:0; color:var(--muted); font-size:14.5px;}
+
+  .callout{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-left:3px solid var(--accent-2);
+    border-radius:12px;
+    padding:16px 18px;
+    margin:18px 0;
+  }
+  .callout .icon{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:13px;
+    color:var(--bg);
+    background:var(--accent-2);
+    width:26px;height:26px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .callout p{margin:0; font-size:14.5px;}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0;
+    font-size:14.5px;
+    overflow-x:auto;
+    display:block;
+  }
+  table thead, table tbody{display:table; width:100%; table-layout:fixed;}
+  th,td{
+    text-align:left;
+    padding:10px 12px;
+    border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  th{color:var(--muted); font-weight:600; font-size:13px;}
+
+  .contact-box{
+    background:var(--accent-grad);
+    border-radius:16px;
+    padding:2px;
+    margin-top:10px;
+    box-shadow:var(--shadow-md);
+  }
+  .contact-box-inner{
+    background:var(--bg-2);
+    border-radius:14px;
+    padding:22px 24px;
+  }
+  .contact-box-inner p{margin:0 0 6px; color:var(--muted);}
+  .contact-box-inner .email{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:17px;
+    color:var(--text);
+  }
+
+  footer{
+    border-top:1px solid var(--border);
+    padding:32px 24px 48px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  ::selection{background:rgba(226,53,119,0.22);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="mark"><span class="dot"></span>HYPNOTIX</span>
+  <h1>Privacy Policy</h1>
+  <p class="tagline">Hypnotix: Live TV IPTV Player — a media player tool for your own playlists</p>
+  <div class="bar"></div>
+  <p class="updated">Last updated: September 18, 2026</p>
+</header>
+
+<div class="shell">
+  <nav class="toc" aria-label="Table of contents">
+    <details class="toc-mobile">
+      <summary>Jump to a section</summary>
+    </details>
+    <div class="toc-title">On this page</div>
+    <ul id="toc-list">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#information-we-collect">Information we collect</a></li>
+      <li><a href="#advertising">Advertising &amp; AdMob</a></li>
+      <li><a href="#storage">Local storage permission</a></li>
+      <li><a href="#content-disclaimer">Content &amp; copyright disclaimer</a></li>
+      <li><a href="#external-sources">Pre-configured external sources</a></li>
+      <li><a href="#dmca">DMCA &amp; takedown policy</a></li>
+      <li><a href="#global-rights">Your privacy rights</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#security">Data security</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="lead"><strong>Hypnotix: Live TV IPTV Player</strong> ("Hypnotix", "the App", "we", "us"), published by <strong>DataShield-Studio</strong>, is a media player application for Android. This Privacy Policy explains what information the App handles, how third-party advertising works inside it, and how Hypnotix relates to the content you choose to play through it. By downloading or using Hypnotix, you agree to the terms described below.</p>
+
+    <section id="overview">
+      <h2><span class="chip"></span>Overview</h2>
+      <p>Hypnotix is a lightweight IPTV player — a tool for opening and playing media streams and playlists that you supply, such as M3U playlists or Xtream Codes logins. Hypnotix does not require you to create an account, and it does not ask for your name, email address, or phone number at any point.</p>
+      <p class="muted">The App currently has no backend server and no Firebase (or equivalent) analytics integration. Nothing you do inside the App is transmitted to servers operated by us, because we do not operate any.</p>
+    </section>
+
+    <section id="information-we-collect">
+      <h2><span class="chip"></span>Information we collect</h2>
+      <p>Hypnotix does not collect, store, or transmit personal user accounts, email addresses, or phone numbers. We do not maintain any user database.</p>
+      <div class="card">
+        <h4>What stays on your device</h4>
+        <p>Playlist URLs, Xtream Codes credentials, and any local media you add are stored only in the App's local storage on your device. This data is not sent to us and is not accessible to us.</p>
+      </div>
+      <div class="card">
+        <h4>What third parties may collect</h4>
+        <p>The only data collection that occurs is carried out by Google's advertising and platform services (Google AdMob and Google Play Services), described in the next sections. We do not control the data these services collect beyond configuring which ad formats appear in the App.</p>
+      </div>
+    </section>
+
+    <section id="advertising">
+      <h2><span class="chip"></span>Advertising &amp; AdMob</h2>
+      <p>Hypnotix is supported by advertising delivered through <strong>Google AdMob</strong>. The App may display:</p>
+      <ul>
+        <li><strong>Banner ads</strong> — small ads shown within the App's interface.</li>
+        <li><strong>Interstitial ads</strong> — full-screen ads shown at natural transition points.</li>
+        <li><strong>Rewarded video ads</strong> — optional video ads you may choose to watch in exchange for an in-app benefit.</li>
+      </ul>
+      <div class="callout">
+        <span class="icon">i</span>
+        <p>AdMob may use device identifiers (such as your Advertising ID) and cookies or similar technologies to serve either personalized or non-personalized ads, and to measure ad performance and limit how often an ad is shown. Where required by your region, you will be shown a consent choice governing personalized advertising.</p>
+      </div>
+      <p>Google's own handling of this data is governed by Google's Privacy Policy and their partner policies, which we encourage you to review:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a></li>
+      </ul>
+      <p class="muted">You can manage ad personalization for your Google Account at any time through your device's ad settings.</p>
+    </section>
+
+    <section id="storage">
+      <h2><span class="chip"></span>Local storage permission</h2>
+      <p>Hypnotix requests access to local device storage for one purpose only: to read, save, and play back playlist files (such as M3U files) and local media that you provide. This permission is not used to scan, upload, or share any other files on your device, and no file contents leave your device through this permission.</p>
+    </section>
+
+    <section id="content-disclaimer">
+      <h2><span class="chip"></span>Content &amp; copyright disclaimer</h2>
+      <p>This section is specific to how Hypnotix works as an IPTV player, and we ask that you read it carefully.</p>
+      <div class="card accent">
+        <h4>Non-affiliation</h4>
+        <p>Hypnotix does not provide, store, host, or sell any playlists, streams, TV channels, or audiovisual content of any kind. Hypnotix is a player, not a content provider.</p>
+      </div>
+      <div class="card accent">
+        <h4>User responsibility</h4>
+        <p>You are solely responsible for supplying your own legally obtained content sources — for example, your own M3U playlists or Xtream Codes credentials. What you choose to open in the App, and whether you are authorized to access that content, is entirely your decision and your responsibility.</p>
+      </div>
+      <div class="card accent">
+        <h4>Copyright compliance</h4>
+        <p>Hypnotix is not affiliated with, endorsed by, or connected to any third-party content provider, broadcaster, or channel. We strictly do not support or condone streaming copyrighted material without proper authorization from its rights holder.</p>
+      </div>
+    </section>
+
+    <section id="external-sources">
+      <h2><span class="chip"></span>Pre-configured external sources &amp; playlists</h2>
+      <p>Hypnotix may include pre-configured shortcuts or links to publicly available, open-source third-party playlist repositories (such as public GitHub repositories). These are provided purely as convenient starting references to help you get set up.</p>
+      <table>
+        <thead>
+          <tr><th style="width:28%">Point</th><th>What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Non-hosting</td>
+            <td>Hypnotix does not host, create, store, or maintain any of the media streams or playlists found within these external repositories.</td>
+          </tr>
+          <tr>
+            <td>Third-party control</td>
+            <td>Content reached through these links is entirely controlled and managed by independent third-party maintainers. Hypnotix has no control over stream availability, content accuracy, or the copyright compliance of these external sources.</td>
+          </tr>
+          <tr>
+            <td>Your discretion</td>
+            <td>Treat pre-configured links the same as any other external source: you are responsible for confirming you're authorized to access what they point to.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="dmca">
+      <h2><span class="chip"></span>DMCA &amp; takedown policy</h2>
+      <p>Hypnotix respects intellectual property rights. If you are a copyright holder and believe a pre-configured link included in the App points to unauthorized content, please contact us using the details below. We will promptly review the report and remove or disable the reference link in a future App update.</p>
+      <div class="contact-box">
+        <div class="contact-box-inner">
+          <p>Send copyright / takedown requests to</p>
+          <p class="email">DataShield.studio@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="global-rights">
+      <h2><span class="chip"></span>Your privacy rights (all regions)</h2>
+      <p>Hypnotix is available worldwide, and this policy is written to meet the disclosure requirements of the regions below. Because the App collects no personal accounts and no data of its own, most of these rights concern the advertising identifiers handled by Google AdMob rather than data held by us.</p>
+
+      <h3>European Economic Area &amp; United Kingdom (GDPR / UK GDPR)</h3>
+      <p>If you are in the EEA or UK, our lawful basis for any advertising-related processing is your consent, collected through an in-app consent prompt where required. You have the right to access, correct, delete, or restrict processing of your data, the right to data portability, and the right to withdraw consent at any time through the App's consent settings or your device's ad settings.</p>
+
+      <h3>California (CCPA / CPRA)</h3>
+      <p>If you are a California resident, you have the right to know what personal information is collected, to request deletion, and to opt out of the "sale" or "sharing" of personal information (which, under California law, can include advertising identifiers used for personalized ads). You can exercise the opt-out through your device's ad settings or by contacting us below. We do not sell personal information for monetary payment.</p>
+
+      <h3>Brazil (LGPD)</h3>
+      <p>If you are in Brazil, you have the right to confirm whether processing occurs, request access, correction, anonymization, or deletion of your data, and to object to processing carried out on the basis of consent.</p>
+
+      <h3>Canada (PIPEDA)</h3>
+      <p>If you are in Canada, you have the right to access and request correction of any personal information held about you, and to withdraw consent to its collection, use, or disclosure, subject to legal restrictions.</p>
+
+      <h3>Other regions</h3>
+      <p>Wherever local law grants you equivalent rights — for example under Australia's Privacy Act, India's DPDP Act, or similar frameworks — we honor those rights to the same extent. To exercise any right described above, contact us using the details in the <a href="#contact">Contact us</a> section; we will respond within the timeframe required by the applicable law.</p>
+
+      <h3>International data transfers</h3>
+      <p>Because Hypnotix has no backend server, we do not transfer your personal data internationally ourselves. Advertising identifiers processed by Google AdMob may be transferred to and processed in countries other than your own, under Google's own safeguards describe
